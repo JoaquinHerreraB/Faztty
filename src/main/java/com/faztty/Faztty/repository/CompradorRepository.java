@@ -7,4 +7,6 @@ import com.faztty.Faztty.entity.Comprador;
 @Repository
 public interface CompradorRepository extends CrudRepository<Comprador, Long> {
 
+
+
 }

@@ -24,7 +24,7 @@ public class Negocio extends Usuario implements Serializable {
 	private String RUC;
 
 	@Column(unique = true, length = 30)
-	private String razonsocial;
+	private String nombre;
 	
 	@Column
 	private Long puntuacion;

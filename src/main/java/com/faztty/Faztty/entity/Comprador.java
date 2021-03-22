@@ -22,7 +22,7 @@ public class Comprador extends Usuario implements Serializable{
 	private String firstName;
 	
 	@Column(length = 30)
-	private String lastname;
+	private String lastName;
 
 
 }

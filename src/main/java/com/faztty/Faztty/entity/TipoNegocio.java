@@ -21,7 +21,7 @@ public class TipoNegocio implements Serializable{
 	@Column(unique = true, length = 30)
 	private String nombre;
 	
-	@Column(unique = true, length = 30)
+	@Column(unique = true, length = 500)
 	private String descripcion;
 	
 	
