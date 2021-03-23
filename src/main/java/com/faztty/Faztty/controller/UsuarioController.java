@@ -19,7 +19,7 @@ public class UsuarioController {
 		if(username.equals("comprador")) {
 			return "redirect:/principal/1";
 		}else if (username.equals("vendedor")) {
-			return "redirect:/producto_vendedor";
+			return "redirect:/mitienda";
 		}else {
 			return "redirect:/login";
 		}
