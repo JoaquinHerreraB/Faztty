@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.ui.Model;
 
 import com.faztty.Faztty.entity.Negocio;
+import com.faztty.Faztty.entity.Producto;
 import com.faztty.Faztty.entity.TipoNegocio;
 import com.faztty.Faztty.service.NegocioService;
+import com.faztty.Faztty.service.ProductoService;
 import com.faztty.Faztty.service.TipoNegocioService;
 
 @Controller
@@ -19,6 +21,9 @@ public class NegocioController {
 	
 	@Autowired
 	NegocioService nService;
+	
+	@Autowired
+	ProductoService pService;
 	
 	@GetMapping({"/principal/{id}"})
 	public String login(@PathVariable Long id,Model model) {
@@ -36,6 +41,22 @@ public class NegocioController {
 		return "v_principal";
 	}
 
+	@GetMapping({"/tienda/{id1}"})
+	public String tienda(@PathVariable Long id1,Model model) {
 
+		for(Producto p:pService.getProductosByNegocio(id1)) {
+			System.out.println(p.getNombre());
+		}
+		model.addAttribute("negocio", nService.getNegocio(id1));
+		model.addAttribute("productoList",pService.getProductosByNegocio(id1)) ;
+		return "producto_cliente";
+	}
+	@GetMapping({"/mitienda/"})
+	public String mitienda(@PathVariable Long id1,Model model) {
+
+		model.addAttribute("negocio", nService.getNegocio(3L));
+		model.addAttribute("productoList",pService.getProductosByNegocio(3L)) ;
+		return "producto_cliente";
+	}
 
 }
