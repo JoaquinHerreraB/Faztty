@@ -32,10 +32,10 @@ public class NegocioController {
 			System.out.println(n.getNombre());
 		}
 		model.addAttribute("tipoList", tnService.getTipoNegocios());
-		model.addAttribute("negocioList", nService.getNegociosByTipo(1L));
+		model.addAttribute("negocioList", nService.getNegociosByTipo(id));
 		return "v_principal";
 	}
-	
+
 
 
 }
