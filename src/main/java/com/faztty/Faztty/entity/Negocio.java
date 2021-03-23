@@ -38,5 +38,53 @@ public class Negocio extends Usuario implements Serializable {
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idTipoNegocio", referencedColumnName = "id")
     private TipoNegocio tipoNegocio;
+
+	public String getRUC() {
+		return RUC;
+	}
+
+	public void setRUC(String rUC) {
+		RUC = rUC;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Long getPuntuacion() {
+		return puntuacion;
+	}
+
+	public void setPuntuacion(Long puntuacion) {
+		this.puntuacion = puntuacion;
+	}
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	public TipoNegocio getTipoNegocio() {
+		return tipoNegocio;
+	}
+
+	public void setTipoNegocio(TipoNegocio tipoNegocio) {
+		this.tipoNegocio = tipoNegocio;
+	}
 	
 }
