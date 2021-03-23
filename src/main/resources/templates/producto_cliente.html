@@ -47,7 +47,7 @@
     <div>
         <div class="container">
             <div class="row" id="row_product">
-                <div th:each="producto: ${productoList}"  class="col-md-4 text-center" id="colum_1"><img class="img-fluid" id="imagen_tienda" th:src="@{'/img/' + ${producto.imagen}}"><label class="text-center" id="nombre_producto" th:text="${producto.nombre}"></label>
+                <div th:each="producto: ${productoList}"  class="col-md-4 text-center" id="colum_1"><img class="img-fluid"  id="imagen_tienda" th:src="@{'/img/' + ${producto.imagen}}"><label class="text-center" id="nombre_producto" th:text="${producto.nombre}"></label>
                     <div class="row">
                         <div class="col-6 text-left">
                             <h4>Marca</h4>
