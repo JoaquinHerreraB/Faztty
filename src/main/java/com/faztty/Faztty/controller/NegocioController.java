@@ -57,6 +57,20 @@ public class NegocioController {
 		model.addAttribute("categoriaList",cService.getCategorias()) ;
 		return "producto_cliente";
 	}
+	
+	@GetMapping({"/tienda/{id1}/categoria/{id2}"})
+	public String tiendacategoria(@PathVariable Long id1,@PathVariable Long id2,Model model) {
+
+		for(Producto p:pService.getProductosByNegocio(id1)) {
+			System.out.println(p.getNombre());
+		}
+		model.addAttribute("negocio", nService.getNegocio(id1));
+		model.addAttribute("productoList",pService.getProductosByCategoriaNegocio(id2, id1)) ;
+		model.addAttribute("categoriaList",cService.getCategorias()) ;
+		return "producto_cliente";
+	}
+	
+	
 	@GetMapping({"/mitienda/"})
 	public String mitienda(@PathVariable Long id1,Model model) {
 
