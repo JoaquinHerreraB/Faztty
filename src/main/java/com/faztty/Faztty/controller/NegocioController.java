@@ -70,7 +70,7 @@ public class NegocioController {
 	}
 	
 	
-	@GetMapping({"/mitienda/"})
+	@GetMapping({"/mitienda"})
 	public String mitienda(Model model) {
 
 		model.addAttribute("negocio", nService.getNegocio(3L));
