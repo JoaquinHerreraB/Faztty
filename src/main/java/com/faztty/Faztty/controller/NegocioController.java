@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import com.faztty.Faztty.entity.Negocio;
 import com.faztty.Faztty.entity.Producto;
 import com.faztty.Faztty.entity.TipoNegocio;
+import com.faztty.Faztty.service.CategoriaService;
 import com.faztty.Faztty.service.NegocioService;
 import com.faztty.Faztty.service.ProductoService;
 import com.faztty.Faztty.service.TipoNegocioService;
@@ -24,6 +25,9 @@ public class NegocioController {
 	
 	@Autowired
 	ProductoService pService;
+	
+	@Autowired
+	CategoriaService cService;
 	
 	@GetMapping({"/principal/{id}"})
 	public String login(@PathVariable Long id,Model model) {
@@ -50,6 +54,7 @@ public class NegocioController {
 		}
 		model.addAttribute("negocio", nService.getNegocio(id1));
 		model.addAttribute("productoList",pService.getProductosByNegocio(id1)) ;
+		model.addAttribute("categoriaList",cService.getCategorias()) ;
 		return "producto_cliente";
 	}
 	@GetMapping({"/mitienda/"})
