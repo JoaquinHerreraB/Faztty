@@ -77,7 +77,17 @@ public class NegocioController {
 
 		model.addAttribute("negocio", nService.getNegocio(3L));
 		model.addAttribute("productoList",pService.getProductosByNegocio(3L)) ;
-		return "producto_cliente";
+		model.addAttribute("categoriaList",cService.getCategorias()) ;
+		return "producto_vendedor";
+	}
+	
+	@GetMapping({"/mitienda/categoria/{id2}"})
+	public String mitienda(@PathVariable Long id1,@PathVariable Long id2,Model model) {
+
+		model.addAttribute("negocio", nService.getNegocio(3L));
+		model.addAttribute("productoList",pService.getProductosByCategoriaNegocio(id2, 3L)) ;
+		model.addAttribute("categoriaList",cService.getCategorias()) ;
+		return "producto_vendedor";
 	}
 
 }
