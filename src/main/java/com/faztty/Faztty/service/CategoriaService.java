@@ -19,6 +19,6 @@ public class CategoriaService {
 	}
 	
 	public Iterable<Categoria> getCategorias(){
-		return repo.findAllOrderByIdAsc();
+		return repo.findAllByOrderByIdAsc();
 	}
 }
