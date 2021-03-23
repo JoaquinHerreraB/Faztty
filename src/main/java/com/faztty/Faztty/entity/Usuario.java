@@ -23,13 +23,13 @@ public class Usuario implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	protected Long id;
+	public Long id;
 	@Column(unique = true, length = 30)
-	protected String username;
+	public String username;
 	@Column(unique = true, length = 30)
-	protected String email;
+	public String email;
 	@Column(length = 60)
-	protected String password;
+	public String password;
 	
 	
 }
