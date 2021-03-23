@@ -37,6 +37,7 @@ public class NegocioController {
 			System.out.println(n.getNombre());
 		}
 		model.addAttribute("tipoList", tnService.getTipoNegocios());
+		model.addAttribute("tipoNegocio", tnService.getTipoNegocio(id));
 		model.addAttribute("negocioList", nService.getNegociosByTipo(id));
 		return "v_principal";
 	}
