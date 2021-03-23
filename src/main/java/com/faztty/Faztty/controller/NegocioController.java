@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.ui.Model;
 
-import com.faztty.Faztty.bean.ProductoBean;
+
 import com.faztty.Faztty.entity.Negocio;
-import com.faztty.Faztty.entity.Producto;
 import com.faztty.Faztty.entity.TipoNegocio;
+import com.faztty.Faztty.entity.Categoria;
 import com.faztty.Faztty.service.CategoriaService;
 import com.faztty.Faztty.service.NegocioService;
 import com.faztty.Faztty.service.ProductoService;
@@ -60,10 +60,8 @@ public class NegocioController {
 	@GetMapping({"/tienda/{id1}/categoria/{id2}"})
 	public String tiendacategoria(@PathVariable Long id1,@PathVariable Long id2,Model model) {
 
-		for(Producto p:pService.getProductosByCategoriaNegocio(id2,id1)) {
-			System.out.println("----");
-			System.out.println(p.getNombre());
-			System.out.println(p.getCategoria().getNombre());
+		for(Categoria c:cService.getCategorias()) {
+			System.out.print(c.nombre);
 		}
 		model.addAttribute("negocio", nService.getNegocio(id1));
 		model.addAttribute("productoList",pService.getProductosByCategoriaNegocio(id2, id1)) ;
@@ -73,7 +71,7 @@ public class NegocioController {
 	
 	
 	@GetMapping({"/mitienda/"})
-	public String mitienda(@PathVariable Long id1,Model model) {
+	public String mitienda(Model model) {
 
 		model.addAttribute("negocio", nService.getNegocio(3L));
 		model.addAttribute("productoList",pService.getProductosByNegocio(3L)) ;
@@ -82,7 +80,7 @@ public class NegocioController {
 	}
 	
 	@GetMapping({"/mitienda/categoria/{id2}"})
-	public String mitienda(@PathVariable Long id1,@PathVariable Long id2,Model model) {
+	public String mitienda(@PathVariable Long id2,Model model) {
 
 		model.addAttribute("negocio", nService.getNegocio(3L));
 		model.addAttribute("productoList",pService.getProductosByCategoriaNegocio(id2, 3L)) ;
