@@ -17,7 +17,7 @@ public class UsuarioController {
 	public String login(@RequestParam("username") String username, @RequestParam("password") String password) {
 
 		if(username.equals("comprador")) {
-			return "redirect:/principal";
+			return "redirect:/principal/1";
 		}else if (username.equals("vendedor")) {
 			return "redirect:/producto_vendedor";
 		}else {
