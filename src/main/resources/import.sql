@@ -6,10 +6,10 @@ insert into `faztty`.`tipo_negocio` (id, nombre, descripcion) values (2,'Dulcer√
 
 insert into `faztty`.`usuario` (tipo, id, email, password, dni,first_name, last_name) values ('C',1, 'rosa@unmsm.com','$2a$10$xBPpxqLBdUXblMGkCwadr.hsNVyJk04A3hb4Fcjn79YeYzAtYCZzC', 'kstrauss0', 'Rosa', 'Strauss');
 insert into `faztty`.`usuario` (tipo, id, email, password, dni,first_name, last_name) values ('C',2, 'cfeldstern1@ucoz.ru', '$2a$10$xBPpxqLBdUXblMGkCwadr.hsNVyJk04A3hb4Fcjn79YeYzAtYCZzC', 'ekornel3','Elliott', 'Kornel');
-insert into `faztty`.`usuario` (tipo, id, email, password, ruc, nombre,imagen,direccion,puntuacion,id_tipo_negocio)  values ('N',3, 'alex@listo.com','$2a$10$xBPpxqLBdUXblMGkCwadr.hsNVyJk04A3hb4Fcjn79YeYzAtYCZzC', '21604816111','Bodega Margarita', "Av Marina 123",'bdm.jpg', 76,1);
-insert into `faztty`.`usuario` (tipo, id, email, password, ruc, nombre,imagen,direccion,puntuacion,id_tipo_negocio)  values ('N',4, 'mcastro2@utmo.com','$2a$10$xBPpxqLBdUXblMGkCwadr.hsNVyJk04A3hb4Fcjn79YeYzAtYCZzC', '11604816111','Cicala y Catita', "Calle Las Flores 33", 'ccc.jpg', 87,1);
-insert into `faztty`.`usuario` (tipo, id, email, password, ruc, nombre,imagen,direccion,puntuacion,id_tipo_negocio)  values ('N',5, 'osstern100@bing.com','$2a$10$xBPpxqLBdUXblMGkCwadr.hsNVyJk04A3hb4Fcjn79YeYzAtYCZzC','21604812111', 'Minimarket Casimiro', "Av Marina 445" ,'mnmcasim.jpg', 98,2);
-insert into `faztty`.`usuario` (tipo, id, email, password, ruc, nombre,imagen,direccion,puntuacion,id_tipo_negocio)  values ('N',6, 'mariciell0@bing.com','$2a$10$xBPpxqLBdUXblMGkCwadr.hsNVyJk04A3hb4Fcjn79YeYzAtYCZzC', '21654816121','Repostera Maricielo', "Av Marina 411" ,'bdmc.jpg', 67,2);
+insert into `faztty`.`usuario` (tipo, id, email, password, ruc, nombre,direccion,imagen,puntuacion,id_tipo_negocio)  values ('N',3, 'alex@listo.com','$2a$10$xBPpxqLBdUXblMGkCwadr.hsNVyJk04A3hb4Fcjn79YeYzAtYCZzC', '21604816111','Bodega Margarita', "Av Marina 123",'bdm.jpg', 76,1);
+insert into `faztty`.`usuario` (tipo, id, email, password, ruc, nombre,direccion,imagen,puntuacion,id_tipo_negocio)  values ('N',4, 'mcastro2@utmo.com','$2a$10$xBPpxqLBdUXblMGkCwadr.hsNVyJk04A3hb4Fcjn79YeYzAtYCZzC', '11604816111','Cicala y Catita', "Calle Las Flores 33", 'ccc.jpg', 87,1);
+insert into `faztty`.`usuario` (tipo, id, email, password, ruc, nombre,direccion,imagen,puntuacion,id_tipo_negocio)  values ('N',5, 'osstern100@bing.com','$2a$10$xBPpxqLBdUXblMGkCwadr.hsNVyJk04A3hb4Fcjn79YeYzAtYCZzC','21604812111', 'Minimarket Casimiro', "Av Marina 445" ,'mnmcasim.jpg', 98,2);
+insert into `faztty`.`usuario` (tipo, id, email, password, ruc, nombre,direccion,imagen,puntuacion,id_tipo_negocio)  values ('N',6, 'mariciell0@bing.com','$2a$10$xBPpxqLBdUXblMGkCwadr.hsNVyJk04A3hb4Fcjn79YeYzAtYCZzC', '21654816121','Repostera Maricielo', "Av Marina 411" ,'bdmc.jpg', 67,2);
 
 
 insert into `faztty`.`categoria` (id, nombre, descripcion) values (1,'Lacteo','Productos derivados de la leche');
